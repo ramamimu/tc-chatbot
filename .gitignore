@@ -1,0 +1,15 @@
+.vscode
+.idea
+*/models/*
+models/
+*/.rasa/*
+.rasa/
+.DS_Store
+venv
+**/__pycache__/
+actions/__pycache__/*
+*.dot
+*.pyc
+
+**/*.db*
+*/story_graph.dot
