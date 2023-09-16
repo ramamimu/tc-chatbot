@@ -1,0 +1,19 @@
+# Use the official Rasa image as a base image
+FROM rasa/rasa:3.6.8
+
+# Copy your Rasa chatbot project files into the container
+COPY . /app
+
+# Set the working directory
+WORKDIR /app
+
+# Expose the Rasa server port (default is 5005)
+EXPOSE 5005
+# EXPOSE 5055
+
+# RUN run train
+
+# Start the Rasa server
+CMD ["run", "--model", "models", "--endpoints", "endpoints.yml", "--port", "5005", "--cors", "*", "--debug"]
+# CMD ["run", "actions", "&&","run", "--model", "models", "--endpoints", "endpoints.yml", "--port", "5005", "--cors", "*", "--debug"]
+# CMD [ "./runner.sh" ]

@@ -4,7 +4,6 @@ nlu:
 - intent: greet
   examples: |
     - hey
-    - hello
     - hi
     - hello there
     - good morning
@@ -13,9 +12,14 @@ nlu:
     - hey there
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
+    - good morning
+    - good evening
     - good afternoon
+
+- intent: world
+  examples: |
+    - world
+    - hello
     - hello world
 
 - intent: goodbye
@@ -39,6 +43,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - thank you
 
 - intent: deny
   examples: |
@@ -66,6 +71,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - i'm good
 
 - intent: mood_unhappy
   examples: |
