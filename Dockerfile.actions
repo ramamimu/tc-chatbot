@@ -1,24 +1,3 @@
-# # Use an appropriate base image for your custom actions server
-# FROM python:3.10.12
-
-# # Copy your custom actions server code and dependencies into the container
-# COPY actions /app/actions
-# COPY requirements.txt /app/
-
-# # Set the working directory
-# WORKDIR /app
-
-# RUN pip install --upgrade pip
-# # Install Python dependencies
-# RUN pip3 install -r requirements.txt
-
-# # Expose the custom actions server port (default is 5055)
-# EXPOSE 5055
-
-# # Start the custom actions server
-# CMD ["python", "-m", "rasa_sdk", "endpoint", "--actions", "actions"]
-
-
 # Use the official Rasa image as a base image
 FROM rasa/rasa:3.6.8
 

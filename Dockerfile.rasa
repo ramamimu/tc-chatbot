@@ -1,6 +1,8 @@
 # Use the official Rasa image as a base image
 FROM rasa/rasa:3.6.8
 
+USER root
+
 # Copy your Rasa chatbot project files into the container
 COPY . /app
 
@@ -11,9 +13,14 @@ WORKDIR /app
 EXPOSE 5005
 # EXPOSE 5055
 
-# RUN run train
+VOLUME /app
+VOLUME /app/data
+VOLUME /app/models
+
+RUN rasa train
+RUN ls
+
+RUN chmod +x /app/models
 
 # Start the Rasa server
-CMD ["run", "--model", "models", "--endpoints", "endpoints.yml", "--port", "5005", "--cors", "*", "--debug"]
-# CMD ["run", "actions", "&&","run", "--model", "models", "--endpoints", "endpoints.yml", "--port", "5005", "--cors", "*", "--debug"]
-# CMD [ "./runner.sh" ]
+CMD ["run", "-m", "/app/models", "--model", "models", "--endpoints", "endpoints.yml", "--port", "5005", "--cors", "*", "--debug"]
