@@ -3,40 +3,31 @@ version: "3.1"
 intents:
   - daftar_file
   - terima_kasih
-  # - world
-  # - greet
-  # - goodbye
-  # - affirm
-  # - deny
-  # - mood_great
-  # - mood_unhappy
-  # - bot_challenge
-
+  - qna_file
+  - kalender_file
+  - daftar_dosen_file
 responses:
   utter_welcome:
   - text: "senang bisa membantu :D"
-  # utter_greet:
-  # - text: "Hey! How are you?"
 
   # utter_cheer_up:
   # - text: "Here is something to cheer you up:"
   #   image: "https://cdn-brilio-net.akamaized.net/news/2023/09/01/263265/11-potret-kocak-meme-kucing-ini-isinya-gombalan-maut-cocok-buat-jomblo-yang-sedang-pdkt-230901p.jpg"
 
-  # utter_did_that_help:
-  # - text: "Did that help you?"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
-
-  # utter_goodbye:
-  # - text: "Bye"
-
-  # utter_iamabot:
-  # - text: "I am a bot, powered by Rasa."
-
 actions:
-# - action_hello_world
 - action_daftar_file
+- action_link_file
+
+entities:
+- file_name
+
+slots:
+  file_name:
+    type: text
+    # influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: file_name
 
 session_config:
   session_expiration_time: 60

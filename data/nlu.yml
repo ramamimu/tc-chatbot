@@ -7,7 +7,7 @@ nlu:
     - dokumen apa yang dipunya?
     - ada dokumen apa saja?
     - file apa yang ada?
-    - tampilkan nama file
+    - tampilkan daftar file
 
 - intent: terima_kasih
   examples: |
@@ -16,8 +16,28 @@ nlu:
     - sangat membantu
     - thank you
 
-# - intent: qna_akademik_file
-#   examples: |
-#     - file q and a akademik kemahasiswaan
-#     - qna akademik kemahasiswaan
-#     - saya ingin file qna akademik kemahasiswaan
+- intent: qna_file
+  examples: |
+    - tampilkan file q and a akademik kemahasiswaan
+    - tampilkan link file q and a akademik kemahasiswaan
+    - saya ingin file qna akademik kemahasiswaan
+    - saya ingin link tanya jawab akademik kemahasiswaan
+    - saya ingin link file qna akademik kemahasiswaan
+
+
+- intent: kalender_file
+  examples: |
+    - tampilkan file kalender akademik its 2023
+    - tampilkan link file kalender akademik
+    - saya ingin file kalender akademik
+    - saya ingin link kalender akademik its 2023
+    - saya ingin link kalender akademik
+
+- intent: daftar_dosen_file
+  examples: |
+    - tampilkan file daftar dosen informatika
+    - tampilkan link file daftar dosen informatika
+    - saya ingin file daftar dosen informatika
+    - saya ingin link daftar dosen informatika
+    - saya ingin link daftar dosen 
+
