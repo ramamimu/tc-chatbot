@@ -2,6 +2,10 @@
 
 ## How to run
 
+> Using Docker
+
+Make sure you have changed in file `endpoints.yml` row 14 from `url: "http://localhost:5055/webhook"` to be `url: "http://actions:5055/webhook`
+
 ### Docker Compose Build
 
 ```bash
