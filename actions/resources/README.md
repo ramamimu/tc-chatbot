@@ -1,0 +1,8 @@
+# Resource 24 September 2023
+
+## One Level Filesystem
+- [Q dan A Akademik dan Kemahasiswaan - S1](https://itsacid-my.sharepoint.com/:x:/r/personal/ary_shiddiqi_if_its_ac_id/_layouts/15/Doc.aspx?sourcedoc=%7BF44B561E-C98D-449E-8809-D08862AD4D10%7D&file=Q%20dan%20A%20Akademik%20dan%20Kemahasiswaan%20-%20S1.xlsx&action=default&mobileredirect=true)
+- [Kalender Akademik ITS 2023-2024 ver  1.xlsx](https://itsacid-my.sharepoint.com/:x:/r/personal/ary_shiddiqi_if_its_ac_id/_layouts/15/Doc.aspx?sourcedoc=%7BCC688BB5-9033-445B-A03D-D6218028550C%7D&file=Kalender%20Akademik%20ITS%202023-2024%20ver%20%201.xlsx&action=default&mobileredirect=true)
+- [Daftar MK IF - wajib dan pilihan.xlsx](https://itsacid-my.sharepoint.com/:x:/r/personal/ary_shiddiqi_if_its_ac_id/_layouts/15/Doc.aspx?sourcedoc=%7B62B52BA4-007D-49E0-AD10-E1805382A5D3%7D&file=Daftar%20MK%20IF%20-%20wajib%20dan%20pilihan.xlsx&action=default&mobileredirect=true)
+- [Daftar Dosen IF](https://itsacid-my.sharepoint.com/:x:/r/personal/ary_shiddiqi_if_its_ac_id/_layouts/15/Doc.aspx?sourcedoc=%7B62B52BA4-007D-49E0-AD10-E1805382A5D3%7D&file=Daftar%20MK%20IF%20-%20wajib%20dan%20pilihan.xlsx&action=default&mobileredirect=true)
+- [Peraturan Akademik](https://itsacid-my.sharepoint.com/personal/ary_shiddiqi_if_its_ac_id/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fary%5Fshiddiqi%5Fif%5Fits%5Fac%5Fid%2FDocuments%2FITS%2FMANAGEMENT%2FPERKULIAHAN%2FRESOURCE%20AKADEMIK%20DAN%20KEMAHASISWAAN%2FPeraturan%20Akademik%202018%2Epdf&parent=%2Fpersonal%2Fary%5Fshiddiqi%5Fif%5Fits%5Fac%5Fid%2FDocuments%2FITS%2FMANAGEMENT%2FPERKULIAHAN%2FRESOURCE%20AKADEMIK%20DAN%20KEMAHASISWAAN)
