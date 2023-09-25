@@ -6,6 +6,8 @@ intents:
   - qna_file
   - kalender_file
   - daftar_dosen_file
+  - daftar_mata_kuliah
+  - daftar_peraturan_akademik
 responses:
   utter_welcome:
   - text: "senang bisa membantu :D"

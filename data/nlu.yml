@@ -24,7 +24,6 @@ nlu:
     - saya ingin link tanya jawab akademik kemahasiswaan
     - saya ingin link file qna akademik kemahasiswaan
 
-
 - intent: kalender_file
   examples: |
     - tampilkan file kalender akademik its 2023
@@ -41,3 +40,18 @@ nlu:
     - saya ingin link daftar dosen informatika
     - saya ingin link daftar dosen 
 
+- intent: daftar_mata_kuliah
+  examples: |
+    - tampilkan file daftar mata kuliah
+    - tampilkan link file daftar mata kuliah
+    - saya ingin file daftar mata kuliah
+    - saya ingin link daftar mata kuliah
+    - saya ingin link daftar mata kuliah informatika 
+
+- intent: daftar_peraturan_akademik
+  examples: |
+    - tampilkan file daftar peraturan akademik
+    - tampilkan link file daftar peraturan akademik
+    - saya ingin file daftar peraturan akademik
+    - saya ingin link daftar peraturan akademik
+    - saya ingin link daftar peraturan akademik informatika 
