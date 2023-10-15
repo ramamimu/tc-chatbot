@@ -4,10 +4,10 @@ nlu:
 - intent: daftar_file
   examples: |
     - apa saja daftar file yang ada?
+    - berapa jumlah file yang ada?
     - dokumen apa yang dipunya?
     - ada dokumen apa saja?
     - file apa yang ada?
-    - tampilkan daftar file
 
 - intent: terima_kasih
   examples: |
@@ -16,42 +16,50 @@ nlu:
     - sangat membantu
     - thank you
 
-- intent: qna_file
+- intent: akses_file
   examples: |
-    - tampilkan file q and a akademik kemahasiswaan
-    - tampilkan link file q and a akademik kemahasiswaan
-    - saya ingin file qna akademik kemahasiswaan
-    - saya ingin link tanya jawab akademik kemahasiswaan
-    - saya ingin link file qna akademik kemahasiswaan
+    - saya ingin mengakses file [qna akademik](file_name)
+    - berikan saya akses ke [daftar dosen](file_name)
+    - akses file [peraturan akademik](file_name)
+    - tampilkan [daftar peraturan akademik](file_name)
+    - tampilkan file [daftar peraturan akademik](file_name)
+    - tampilkan link [peraturan akademik](file_name)
+    - saya ingin file [kalender akademik](file_name)
+    - saya ingin link [peraturan akademik](file_name)
+    - saya ingin link daftar [peraturan akademik informatika](file_name) 
 
-- intent: kalender_file
-  examples: |
-    - tampilkan file kalender akademik its 2023
-    - tampilkan link file kalender akademik
-    - saya ingin file kalender akademik
-    - saya ingin link kalender akademik its 2023
-    - saya ingin link kalender akademik
+# -------------
+# -- synonym --
+# -------------
 
-- intent: daftar_dosen_file
+- synonym: kalender_akademik
   examples: |
-    - tampilkan file daftar dosen informatika
-    - tampilkan link file daftar dosen informatika
-    - saya ingin file daftar dosen informatika
-    - saya ingin link daftar dosen informatika
-    - saya ingin link daftar dosen 
+    - kalender akademik
+    - kalender akademik its
+    - kalender kemahasiswaan
 
-- intent: daftar_mata_kuliah
+- synonym: qna_akademik
   examples: |
-    - tampilkan file daftar mata kuliah
-    - tampilkan link file daftar mata kuliah
-    - saya ingin file daftar mata kuliah
-    - saya ingin link daftar mata kuliah
-    - saya ingin link daftar mata kuliah informatika 
+    - qna akademik
+    - q n a akademik
+    - tanya jawab akademik
+    - q and a akademik kemahasiswaan
 
-- intent: daftar_peraturan_akademik
+- synonym: peraturan_akademik
   examples: |
-    - tampilkan file daftar peraturan akademik
-    - tampilkan link file daftar peraturan akademik
-    - saya ingin file daftar peraturan akademik
-    - saya ingin link daftar peraturan akademik
-    - saya ingin link daftar peraturan akademik informatika 
+    - peraturan akademik
+    - daftar peraturan akademik
+    - peraturan akademik mahasiswa
+    - peraturan akademik informatika
+
+- synonym: daftar_dosen
+  examples: |
+    - daftar dosen
+    - daftar dosen informatika
+    - daftar dosen informatika its
+
+- synonym: daftar_mata_kuliah
+  examples: |
+    - daftar mata kuliah
+    - daftar mata kuliah informatika
+    - daftar mata kuliah informatika its

@@ -7,13 +7,7 @@ stories:
   - intent: daftar_file
   - action: action_daftar_file
 
-- story: menanyakan url akademik file
+- story: menanyakan akses
   steps:
-  - or:
-    - intent: qna_file
-    - intent: kalender_file
-    - intent: daftar_dosen_file
-    - intent: daftar_mata_kuliah
-    - intent: daftar_peraturan_akademik
-  - action: action_link_file
-
+  - intent: akses_file
+  - action: action_access_file

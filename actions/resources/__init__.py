@@ -16,11 +16,11 @@ file_resources = {
         "https://itsacid-my.sharepoint.com/personal/ary_shiddiqi_if_its_ac_id/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fary%5Fshiddiqi%5Fif%5Fits%5Fac%5Fid%2FDocuments%2FITS%2FMANAGEMENT%2FPERKULIAHAN%2FRESOURCE%20AKADEMIK%20DAN%20KEMAHASISWAAN%2FPeraturan%20Akademik%202018%2Epdf&parent=%2Fpersonal%2Fary%5Fshiddiqi%5Fif%5Fits%5Fac%5Fid%2FDocuments%2FITS%2FMANAGEMENT%2FPERKULIAHAN%2FRESOURCE%20AKADEMIK%20DAN%20KEMAHASISWAAN",
     ],
     "intents_name": [
-        "qna_file",
-        "kalender_file",
+        "qna_akademik",
+        "kalender_akademik",
         "daftar_mata_kuliah",
-        "daftar_dosen_file",
-        "daftar_peraturan_akademik",
+        "daftar_dosen",
+        "peraturan_akademik",
     ],
 }
 

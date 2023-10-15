@@ -70,8 +70,9 @@ action_endpoint:
 
 for running, need two terminal which are run
 
+`--debug` means for developoing purposes
 ```sh
-rasa shell
+rasa shell --debug
 ```
 
 ```sh

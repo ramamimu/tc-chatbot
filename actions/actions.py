@@ -25,7 +25,7 @@ class ActionFileList(Action):
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict
     ) -> List[Dict[Text, Any]]:
         _text = ""
-        prefix = f"kami mempunyai daftar file sebanyak {len(file_resources)}\n"
+        prefix = f'kami mempunyai daftar file sebanyak {len(file_resources["names"])}\n'
         _text += prefix
         names = file_resources["names"]
         for idx, name in enumerate(names):
@@ -36,18 +36,15 @@ class ActionFileList(Action):
         return []
 
 
-class ActionLinkFile(Action):
+class ActionFileAccess(Action):
     def name(self) -> Text:
-        return "action_link_file"
+        return "action_access_file"
 
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict
     ) -> List[Dict[Text, Any]]:
-        # file_name = tracker.get_slot("file_name")
-        # _text = f"baik, kami akan mencarikan {file_name}"
-
         _text = ""
-        intent = tracker.get_intent_of_latest_message()
+        intent = tracker.get_slot("file_name")
         intents: List[str] = file_resources["intents_name"]
         urls: List[str] = file_resources["urls"]
         names: List[str] = file_resources["names"]
