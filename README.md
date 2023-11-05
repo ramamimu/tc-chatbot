@@ -79,6 +79,11 @@ rasa shell --debug
 rasa run actions
 ```
 
+for interactive mode
+```sh
+rasa interactive
+```
+
 > if you are running on the docker, please __change manually the host__ in `endpoints.yml`
 
 ### Code Flow

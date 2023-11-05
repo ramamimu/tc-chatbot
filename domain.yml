@@ -4,9 +4,15 @@ intents:
   - daftar_file
   - terima_kasih
   - akses_file
+  - laporan_pencontekan
+  - kejadian_pencontekan
 responses:
   utter_welcome:
   - text: "senang bisa membantu :D"
+  utter_cheating:
+  - text: silakan masukan detail nama dan kejadian pencontekan
+  utter_cheating_response:
+  - text: terima kasih atas kepeduliannya. Laporan Anda sangat berarti untuk menjunjung tinggu suportivitas di lingkungan civitas akademik
 
   # utter_cheer_up:
   # - text: "Here is something to cheer you up:"
@@ -15,9 +21,14 @@ responses:
 actions:
 - action_daftar_file
 - action_access_file
+- utter_welcome
+- utter_cheating
+- utter_cheating_response
 
 entities:
 - file_name
+- student_name
+- incidents
 
 slots:
   file_name:
@@ -26,6 +37,28 @@ slots:
     mappings:
     - type: from_entity
       entity: file_name
+  student_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: student_name
+      conditions:
+      - active_loop: cheating_form
+  incidents:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: incidents
+      conditions:
+      - active_loop: cheating_form
+forms:
+  cheating_form:
+    required_slots:
+    # - student_name
+    - incidents
+
 
 session_config:
   session_expiration_time: 60

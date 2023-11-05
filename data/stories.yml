@@ -11,3 +11,24 @@ stories:
   steps:
   - intent: akses_file
   - action: action_access_file
+
+- story: melaporkan perbuatan mencontek
+  steps:
+  - intent: laporan_pencontekan
+  - action: cheating_form
+  - active_loop: cheating_form
+  # - slot_was_set:
+  #   - requested_slot: student_name
+  # - slot_was_set:
+  #   - student_name: azrul
+  - slot_was_set:
+    - requested_slot: incidents
+  - slot_was_set:
+    - incidents: di suatu pagi yang indah bersama kawan-kawan
+  # - slot_was_set:
+  #   - requested_slot: null
+  - active_loop: null
+  - action: utter_cheating_response    
+
+
+    
