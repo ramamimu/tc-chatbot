@@ -4,5 +4,21 @@ rules:
 
 - rule: mengatakan senang bisa membantu ketika bilang terima kasih
   steps:
-  - intent: terima_kasih
-  - action: utter_welcome
+    - intent: terima_kasih
+    - action: utter_welcome
+
+- rule: mengaktifkan form autorisasi nrp
+  steps:
+    - intent: sapaan
+    - action: authorization_form
+    - active_loop: authorization_form
+
+- rule: submit autorisasi form
+  condition:
+    - active_loop: authorization_form
+  steps:
+    - action: authorization_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_submit

@@ -4,12 +4,26 @@ stories:
 
 - story: mendapatkan file
   steps:
-  - intent: daftar_file
-  - action: action_daftar_file
+    - intent: daftar_file
+    - action: action_daftar_file
 
 - story: menanyakan akses
   steps:
-  - intent: akses_file
-  - action: action_access_file
+    - intent: akses_file
+    - action: action_access_file
 
-    
+- story: autorisasi
+  steps:
+    - intent: sapaan
+    - action: authorization_form
+    - active_loop: authorization_form
+    - slot_was_set:
+      - requested_slot: nrp
+    - slot_was_set:
+      - nrp: 502520502120
+    - slot_was_set:
+      - nrp: 2091983928
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: utter_submit

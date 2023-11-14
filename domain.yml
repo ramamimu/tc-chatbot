@@ -4,9 +4,14 @@ intents:
   - daftar_file
   - terima_kasih
   - akses_file
+  - inform_nrp
+  - sapaan
 responses:
   utter_welcome:
   - text: "senang bisa membantu :D"
+
+  utter_submit:
+  - text: autorisasi diberikan, selamat datang {nrp}!
 
   # utter_cheer_up:
   # - text: "Here is something to cheer you up:"
@@ -15,10 +20,12 @@ responses:
 actions:
 - action_daftar_file
 - action_access_file
+- utter_submit
 - utter_welcome
 
 entities:
 - file_name
+- nrp
 
 slots:
   file_name:
@@ -26,7 +33,17 @@ slots:
     mappings:
     - type: from_entity
       entity: file_name
+  nrp:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nrp
 
+forms:
+  authorization_form:
+    required_slots:
+      - nrp
 
 session_config:
   session_expiration_time: 60

@@ -28,6 +28,31 @@ nlu:
     - saya ingin link [peraturan akademik](file_name)
     - saya ingin link daftar [peraturan akademik informatika](file_name) 
 
+- intent: sapaan
+  examples: |
+    - hey
+    - hello
+    - hi
+    - selamat pagi
+    - selamat siang
+    - selamat malam
+    - hey dude
+    - good morning
+    - good evening
+    - good afternoon
+    - yo
+
+- intent: inform_nrp
+  examples: |
+    - ini nrp saya [50392453295](nrp)
+    - nrp saya [50392453295](nrp)
+    - berikut adalah nrp saya [50392453295](nrp)
+    - [209209209123](nrp) adalah nrp saya
+    - [50252012092](nrp)
+    - [50392453295](nrp)
+    - [50392453295](nrp)
+
+
 # -------------
 # -- synonym --
 # -------------
