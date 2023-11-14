@@ -6,19 +6,3 @@ rules:
   steps:
   - intent: terima_kasih
   - action: utter_welcome
-
-- rule: mengaktifkan form pencontekan
-  steps:
-  - intent: laporan_pencontekan
-  - action: cheating_form
-  - active_loop: cheating_form
-
-- rule: Laporan pencontekan
-  condition:
-  - active_loop: cheating_form
-  steps: 
-  - action: cheating_form
-  - active_loop: null
-  - slot_was_set: 
-    - requested_slot: null
-  - action: utter_cheating_response
