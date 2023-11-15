@@ -10,6 +10,7 @@ rules:
 - rule: mengaktifkan form autorisasi nrp
   steps:
     - intent: sapaan
+    - action: utter_ask_nrp
     - action: authorization_form
     - active_loop: authorization_form
 

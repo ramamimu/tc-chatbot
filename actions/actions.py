@@ -9,12 +9,37 @@
 
 from typing import Any, Coroutine, Text, Dict, List
 
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.interfaces import Tracker
 from rasa_sdk.types import DomainDict
 
 from actions.resources import file_resources, IndexTopic
+from actions.resources.authorization import allowed_person
+from actions.resources.type import SlotName
+
+
+# the best practice for giving class name is Validate<NameForm>
+# inherritance from class FormValidationAction
+# the total function in the class depend on slot total in a form
+class ValidateAuthorizationForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_authorization_form"
+
+    # the best practice for giving name function is validate_<name_slot>
+    def validate_nrp(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ):
+        if slot_value.lower() in allowed_person:
+            return {SlotName.NRP.value: slot_value}
+        dispatcher.utter_message(
+            f"mohon maaf {slot_value}, Anda tidak dapat mengakses lebih lanjut, silakan coba lagi"
+        )
+        return {SlotName.NRP.value: None}
 
 
 class ActionFileList(Action):

@@ -1,31 +1,37 @@
 version: "3.1"
 
+responses:
+  utter_welcome:
+    - text: "senang bisa membantu :D"
+
+  utter_ask_nrp:
+    - text: "hi, mohon masukkan nrp Anda!"
+
+  utter_submit:
+    - text: autorisasi diberikan, selamat datang {nrp}!
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://cdn-brilio-net.akamaized.net/news/2023/09/01/263265/11-potret-kocak-meme-kucing-ini-isinya-gombalan-maut-cocok-buat-jomblo-yang-sedang-pdkt-230901p.jpg"
+
 intents:
   - daftar_file
   - terima_kasih
   - akses_file
   - inform_nrp
   - sapaan
-responses:
-  utter_welcome:
-  - text: "senang bisa membantu :D"
-
-  utter_submit:
-  - text: autorisasi diberikan, selamat datang {nrp}!
-
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://cdn-brilio-net.akamaized.net/news/2023/09/01/263265/11-potret-kocak-meme-kucing-ini-isinya-gombalan-maut-cocok-buat-jomblo-yang-sedang-pdkt-230901p.jpg"
 
 actions:
-- action_daftar_file
-- action_access_file
-- utter_submit
-- utter_welcome
+  - utter_submit
+  - utter_welcome
+  - utter_ask_nrp
+  - action_daftar_file
+  - action_access_file
+  - validate_authorization_form
 
 entities:
-- file_name
-- nrp
+  - file_name
+  - nrp
 
 slots:
   file_name:
@@ -39,6 +45,9 @@ slots:
     mappings:
     - type: from_entity
       entity: nrp
+      conditions:
+        - active_loop: authorization_form
+          requested_slot: nrp
 
 forms:
   authorization_form:

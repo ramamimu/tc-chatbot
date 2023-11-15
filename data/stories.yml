@@ -15,6 +15,7 @@ stories:
 - story: autorisasi
   steps:
     - intent: sapaan
+    - action: utter_ask_nrp
     - action: authorization_form
     - active_loop: authorization_form
     - slot_was_set:
