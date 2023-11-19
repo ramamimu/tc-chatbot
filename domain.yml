@@ -10,6 +10,9 @@ responses:
   utter_submit:
     - text: autorisasi diberikan, selamat datang {nrp}!
 
+  utter_please_submit:
+    - text: mohon masukkan nrp Anda terlebih dahulu!
+
   # utter_cheer_up:
   # - text: "Here is something to cheer you up:"
   #   image: "https://cdn-brilio-net.akamaized.net/news/2023/09/01/263265/11-potret-kocak-meme-kucing-ini-isinya-gombalan-maut-cocok-buat-jomblo-yang-sedang-pdkt-230901p.jpg"
@@ -25,6 +28,7 @@ actions:
   - utter_submit
   - utter_welcome
   - utter_ask_nrp
+  - utter_please_submit
   - action_daftar_file
   - action_access_file
   - validate_authorization_form

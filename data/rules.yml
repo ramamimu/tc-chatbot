@@ -23,3 +23,16 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: utter_submit
+
+- rule: menginterupsi autorisasi form
+  condition:
+    - active_loop: authorization_form
+  steps:
+    - or:
+      - intent: daftar_file
+      - intent: terima_kasih
+      - intent: akses_file
+      - intent: sapaan
+    - action: utter_please_submit
+    - action: authorization_form
+    - active_loop: authorization_form

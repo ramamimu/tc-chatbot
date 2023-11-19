@@ -63,6 +63,8 @@ nlu:
     - ujian
     - eas
     - ets
+    - quiz
+    - kuiz
 
 - synonym: kalender_akademik
   examples: |
