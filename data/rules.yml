@@ -2,15 +2,26 @@ version: "3.1"
 
 rules:
 
+- rule: mendapatkan file
+  steps:
+    - intent: daftar_file
+    - action: action_daftar_file
+
+- rule: menanyakan akses
+  steps:
+    - intent: akses_file
+    - action: action_access_file
+
 - rule: mengatakan senang bisa membantu ketika bilang terima kasih
   steps:
     - intent: terima_kasih
     - action: utter_welcome
 
+# the multiplication message appear due to the slot registered in responses domain.yaml
+# for preventing that case. disactive that response and write to be manual responses
 - rule: mengaktifkan form autorisasi nrp
   steps:
     - intent: sapaan
-    - action: utter_ask_nrp
     - action: authorization_form
     - active_loop: authorization_form
 
@@ -18,7 +29,6 @@ rules:
   condition:
     - active_loop: authorization_form
   steps:
-    - action: authorization_form
     - active_loop: null
     - slot_was_set:
       - requested_slot: null

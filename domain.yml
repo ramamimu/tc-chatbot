@@ -4,6 +4,7 @@ responses:
   utter_welcome:
     - text: "senang bisa membantu :D"
 
+  # utter_ask_<slot name> will automatically called when the form or slot involved
   utter_ask_nrp:
     - text: "hi, mohon masukkan nrp Anda!"
 

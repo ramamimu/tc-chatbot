@@ -2,20 +2,9 @@ version: "3.1"
 
 stories:
 
-- story: mendapatkan file
-  steps:
-    - intent: daftar_file
-    - action: action_daftar_file
-
-- story: menanyakan akses
-  steps:
-    - intent: akses_file
-    - action: action_access_file
-
 - story: autorisasi
   steps:
     - intent: sapaan
-    - action: utter_ask_nrp
     - action: authorization_form
     - active_loop: authorization_form
     - slot_was_set:
