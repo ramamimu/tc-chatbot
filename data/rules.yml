@@ -22,6 +22,7 @@ rules:
 - rule: mengaktifkan form autorisasi nrp
   steps:
     - intent: sapaan
+    - action: utter_please_submit
     - action: authorization_form
     - active_loop: authorization_form
 
@@ -43,6 +44,5 @@ rules:
       - intent: terima_kasih
       - intent: akses_file
       - intent: sapaan
-    - action: utter_please_submit
     - action: authorization_form
     - active_loop: authorization_form

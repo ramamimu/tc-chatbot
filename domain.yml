@@ -5,8 +5,8 @@ responses:
     - text: "senang bisa membantu :D"
 
   # utter_ask_<slot name> will automatically called when the form or slot involved
-  utter_ask_nrp:
-    - text: "hi, mohon masukkan nrp Anda!"
+  # utter_ask_nrp:
+  #   - text: "hi, mohon masukkan nrp Anda!"
 
   utter_submit:
     - text: autorisasi diberikan, selamat datang {nrp}!
@@ -28,7 +28,7 @@ intents:
 actions:
   - utter_submit
   - utter_welcome
-  - utter_ask_nrp
+  # - utter_ask_nrp
   - utter_please_submit
   - action_daftar_file
   - action_access_file
